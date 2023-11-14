@@ -3,25 +3,25 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form>
+<form method="post" asp-controller="Cliente" asp-action="InserirCliente">
     <div class="form-group">
         <label for="exampleInputEmail1">Nome:</label>
-        <input type="text" class="form-control" id="exampleInputNome" aria-describedby="NomelHelp" placeholder="digite o seu nome AQUI">
+        <input type="text" class="form-control" id="exampleInputNome" name="NomeCliente"  aria-describedby="NomelHelp" placeholder="digite o seu nome AQUI">
         
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">CPF:</label>
-        <input type="number" class="form-control" id="exampleInputCPF" placeholder="digite o seu CPF AQUI">
+        <input type="text" class="form-control" id="exampleInputCPF" name="CPF" placeholder="digite o seu CPF AQUI">
     </div>
     
     <div class="form-group">
         <label for="exampleInputEmail1">Email:</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="digite o seu email AQUI">
+        <input type="email" class="form-control" id="exampleInputEmail1" name="Email" aria-describedby="emailHelp" placeholder="digite o seu email AQUI">
         
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Crie uma senha:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+        <input type="password" class="form-control" id="exampleInputPassword1" name="Senha" placeholder="**********">
     </div>
     
     <button type="submit" class="btn btn-primary">Submit</button>

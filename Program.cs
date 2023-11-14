@@ -1,3 +1,6 @@
+using CompraRápida.DbContext;
+using CompraRápida.repositorio;
+
 namespace CompraRápida
 {
     public class Program
@@ -5,9 +8,12 @@ namespace CompraRápida
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddScoped<DatabaseService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<ClienteService>();
 
             var app = builder.Build();
 
